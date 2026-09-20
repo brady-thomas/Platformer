@@ -1,0 +1,45 @@
+<html>
+    <head> 
+        <title>Platformer</title>
+        <style>
+            *{
+                margin: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canv">
+        </canvas>
+
+        <script src="../engine/Vector2.js"></script>
+        <script src="../engine/input.js"></script>
+        <script src="../engine/Engine.js"></script>
+        <script src="../engine/Scene.js"></script>
+        <script src="../engine/GameObjects.js"></script>
+        <script src="../engine/Component.js"></script>
+        <script src="../engine/Time.js"></script>
+
+        <script src="../engine/components/Transform.js"></script>
+        <script src="../engine/components/Polygon.js"></script>
+
+        <script src="../games/Components/UpdateComponent.js"></script>
+        <script src="../games/GameObjects/MainGameObject.js"></script>
+        <script src="../games/GameObjects/PlatformGameObject.js"></script>
+        <script src="../games/GameObjects/EvilPlatformGameObject.js"></script>
+
+        <script src="../games/Scenes/MainScene.js"></script>
+        <script src="../games/Assets.js"></script>
+
+
+
+
+        <script>
+
+            Engine.currentScene = new MainScene()
+            Engine.start()
+
+        </script>
+
+    </body>
+</html>
