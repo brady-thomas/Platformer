@@ -24,6 +24,7 @@ class UpdateComponent extends Component {
         
         let myPosition = this.transform.position
         let evilPlatform = GameObjects.find("EvilPlatform")
+        let mainCube = GameObjects.find("Main")
 
         let evilPlatPosition = evilPlatform.transform.position
         let distance = myPosition.minus(evilPlatPosition)
@@ -39,7 +40,7 @@ class UpdateComponent extends Component {
 
         
         if (xDistance < 81 && yDistance <301){
-            //MainGameObject.GameObjects.destroy()
+            //mainCube.destroy()
             console.log("died")
         }
     }
