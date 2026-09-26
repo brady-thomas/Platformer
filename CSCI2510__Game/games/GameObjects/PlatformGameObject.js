@@ -1,7 +1,7 @@
 class PlatformGameObject extends GameObjects{
     constructor(){
         super("Platform")
-        this.addComponent(new Polygon(), {fillStyle: "blue", points:Assets.platform})
+        this.addComponent(new Polygon(), {fillStyle: "darkblue", points:Assets.platform})
 
 
     }

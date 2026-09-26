@@ -5,6 +5,7 @@
             *{
                 margin: 0;
                 overflow: hidden;
+                background-color: black;
             }
         </style>
     </head>
@@ -19,25 +20,54 @@
         <script src="../engine/GameObjects.js"></script>
         <script src="../engine/Component.js"></script>
         <script src="../engine/Time.js"></script>
+        <script src="../engine/SceneManager.js"></script>
 
         <script src="../engine/components/Transform.js"></script>
         <script src="../engine/components/Polygon.js"></script>
+        <script src="../engine/components/TextLabel.js"></script>
 
         <script src="../games/Components/UpdateComponent.js"></script>
+        <script src="../games/Components/DeathController.js"></script>
+        <script src="../games/Components/Level01Controller.js"></script>
+        <script src="../games/Components/TimeDisplayComponent.js"></script>
+        <script src="../games/Components/GoodPlatformController.js"></script>
+        <script src="../games/Components/StartScreenController.js"></script>
+        <script src="../games/Components/Level02Controller.js"></script>
+        
+        
+
         <script src="../games/GameObjects/MainGameObject.js"></script>
         <script src="../games/GameObjects/PlatformGameObject.js"></script>
         <script src="../games/GameObjects/EvilPlatformGameObject.js"></script>
+        <script src="../games/GameObjects/GoodPlatformGameObject.js"></script>
+        <script src="../games/GameObjects/Spike.js"></script>
+        <script src="../games/GameObjects/Level01ControllerGameObject.js"></script>
+        <script src="../games/GameObjects/TimeDisplayGameObject.js"></script>
+        <script src="../games/GameObjects/WinCheckGameObject.js"></script>
+        <script src="../games/GameObjects/StartScreenGameObject.js"></script>
+        <script src="../games/GameObjects/Level02ControllerGameObject.js"></script>
+        <script src="../games/GameObjects/HalfPlatform.js"></script>
 
-        <script src="../games/Scenes/MainScene.js"></script>
+        
+        
+        
+
+        <script src="../games/Scenes/Level01.js"></script>
+        <script src="../games/Scenes/Level02.js"></script>
+        <script src="../games/Scenes/Level03.js"></script>
+        <script src="../games/Scenes/GenericLevel.js"></script>
+        <script src="../games/Scenes/StartScene.js"></script>
+
+
         <script src="../games/Assets.js"></script>
+        <script src="../games/Globals.js"></script>
 
 
 
 
         <script>
 
-            Engine.currentScene = new MainScene()
-            Engine.start()
+            Engine.start(StartScene)
 
         </script>
 

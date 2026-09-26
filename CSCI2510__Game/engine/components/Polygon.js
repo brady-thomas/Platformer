@@ -8,7 +8,7 @@ class Polygon extends Component {
 
         ctx.save()
 
-        ctx.translate(position.x, position.y)
+        ctx.translate(this.transform.position.x, this.transform.position.y)
         ctx.scale(this.transform.scale.x, this.transform.scale.y)
         ctx.rotate(this.transform.rotation)
 

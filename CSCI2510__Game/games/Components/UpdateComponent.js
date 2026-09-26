@@ -1,18 +1,23 @@
 class UpdateComponent extends Component {
 
-    speed = 480
+    speed = 960
 
 
 
     start(){
-        this.timeSinceLastJump = 0
+        
     }
 
 
 
 
     update() {
-        this.timeSinceLastJump += Time.deltaTime
+
+
+        let isStartScene = SceneManager.currentScene
+        if (!(isStartScene == "StartScene")){
+            Globals.timeDisplay += Time.deltaTime
+        }
 
         if (Input.keysDown.includes("ArrowRight") || Input.keysDown.includes("KeyD"))
             this.transform.position.x = this.transform.position.x + Time.deltaTime * this.speed
@@ -21,28 +26,13 @@ class UpdateComponent extends Component {
             this.transform.position.x = this.transform.position.x - Time.deltaTime * this.speed
         if (Input.keysDown.includes("ArrowUp") || Input.keysDown.includes("KeyW"))
             this.transform.position.y = this.transform.position.y - Time.deltaTime * this.speed
-        
-        let myPosition = this.transform.position
-        let evilPlatform = GameObjects.find("EvilPlatform")
-        let mainCube = GameObjects.find("Main")
 
-        let evilPlatPosition = evilPlatform.transform.position
-        let distance = myPosition.minus(evilPlatPosition)
-
-        //console.log(evilPlatform)
-
-        let xDistance = Math.abs(distance.x)
-        let yDistance = Math.abs(distance.y)
-
-        //console.log("x",xDistance)
-        //console.log("y",yDistance)
-
-
-        
-        if (xDistance < 81 && yDistance <301){
-            //mainCube.destroy()
-            console.log("died")
+        if (Input.keysDown.includes("ArrowDown") || Input.keysDown.includes("KeyS")){
+            if (this.transform.position.y < 575)
+                this.transform.position.y = this.transform.position.y + Time.deltaTime * this.speed
         }
+        
+        
     }
 
 }

@@ -2,11 +2,13 @@ class MainGameObject extends GameObjects{
     constructor(){
         super("Main")
         this.addComponent(new UpdateComponent())
-        this.addComponent(new Polygon(), {fillStyle: "black", points: [
-            new Vector2(100, 350),
-            new Vector2(150, 350),
-            new Vector2(150, 400),
-            new Vector2(100, 400)
+        this.addComponent(new DeathController())
+        this.addComponent(new GoodPlatformController())
+        this.addComponent(new Polygon(), {fillStyle: "DimGray", points: [
+            new Vector2(-25, -25),
+            new Vector2(25, -25),
+            new Vector2(25, 25),
+            new Vector2(-25, 25)
         
 
         ]})
