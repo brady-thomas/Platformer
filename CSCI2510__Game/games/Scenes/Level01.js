@@ -12,6 +12,6 @@ class Level01 extends Scene{
         this.instantiate(new WinCheckGameObject(), new Vector2(-1000,-1000))
         
     
-
+        this.instantiate(new ControlsTextLabel(), new Vector2(350, 390))
     }
 }

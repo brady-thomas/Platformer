@@ -6,3 +6,4 @@ class GenericLevel extends Scene{
     }        
 
 }
+

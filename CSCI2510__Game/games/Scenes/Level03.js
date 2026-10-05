@@ -2,23 +2,30 @@ class Level03 extends Scene{
     constructor(){
         super()
         this.instantiate(new PlatformGameObject(), new Vector2(150,625))
+        this.instantiate(new PlatformGameObject(), new Vector2(350,625))
+        this.instantiate(new PlatformGameObject(), new Vector2(550,625))
+        this.instantiate(new PlatformGameObject(), new Vector2(750,625))
+        this.instantiate(new PlatformGameObject(), new Vector2(950,625))
 
-        this.instantiate(new PlatformGameObject(), new Vector2(600,475))
+        this.instantiate(new GoodPlatformGameObject(), new Vector2(1050,625))
 
-        this.instantiate(new HalfPlatform(), new Vector2(850,325))
-        this.instantiate(new HalfPlatform(), new Vector2(1050,325))
-        
-        this.instantiate(new PlatformGameObject(), new Vector2(475,550), (Math.PI / 2))
-        this.instantiate(new PlatformGameObject(), new Vector2(825,400), (Math.PI / 2))
+        this.instantiate(new Level03ControllerGameObject())
 
-        this.instantiate(new EvilPlatformGameObject(), new Vector2(750,475))
-        this.instantiate(new EvilPlatformGameObject(), new Vector2(400,625))
-       
 
-        this.instantiate(new GoodPlatformGameObject(), new Vector2(950,325))
+        this.instantiate(new Spike(), new Vector2(350,560))
+        this.instantiate(new Spike(), new Vector2(400,560))
+        this.instantiate(new Spike(), new Vector2(450,560))
+        this.instantiate(new Spike(), new Vector2(500,560))
+        this.instantiate(new Spike(), new Vector2(550,560))
+        this.instantiate(new Spike(), new Vector2(600,560))
+        this.instantiate(new Spike(), new Vector2(650,560))
+        this.instantiate(new Spike(), new Vector2(700,560))
 
-        this.instantiate(new Level02ControllerGameObject())
 
         this.instantiate(new WinCheckGameObject(), new Vector2(-1000,-1000))
+    
+
+
     }
-}1
+
+}

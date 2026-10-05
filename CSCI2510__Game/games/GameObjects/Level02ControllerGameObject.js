@@ -1,6 +1,6 @@
 class Level02ControllerGameObject extends GameObjects{
     constructor(){
-        super("Level01ControllerGameObject")
+        super("Level02ControllerGameObject")
         this.addComponent(new Level02Controller())
     }
 

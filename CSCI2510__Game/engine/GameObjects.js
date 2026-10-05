@@ -29,6 +29,13 @@ class GameObjects{
         return (this.components.find(c=>c instanceof type))
     }
 
+    broadcastMessage(message, args = []){
+        for (const component of this.components){
+            component[message]?.(...args)
+        }
+    }
+
+
     start(){
         for (const component of this.components.filter(c=>!c.didStart)){
             component.start?.()
@@ -63,6 +70,10 @@ class GameObjects{
 
     static findGameObjectsWithTag(tag){
         return SceneManager.currentScene.gameObjects.filter(go=>go.tags.includes(tag))
+    }
+
+    static findGameObjectsByType(type){
+        return SceneManager.currentScene.gameObjects.filter(go=>go.components.find(c=>c instanceof type))
     }
 
 }   

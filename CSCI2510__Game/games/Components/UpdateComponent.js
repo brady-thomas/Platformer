@@ -5,7 +5,6 @@ class UpdateComponent extends Component {
 
 
     start(){
-        
     }
 
 
@@ -28,9 +27,10 @@ class UpdateComponent extends Component {
             this.transform.position.y = this.transform.position.y - Time.deltaTime * this.speed
 
         if (Input.keysDown.includes("ArrowDown") || Input.keysDown.includes("KeyS")){
-            if (this.transform.position.y < 575)
-                this.transform.position.y = this.transform.position.y + Time.deltaTime * this.speed
+            this.transform.position.y = this.transform.position.y + Time.deltaTime * this.speed
         }
+       
+        
         
         
     }

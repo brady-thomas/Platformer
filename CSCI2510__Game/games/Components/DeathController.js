@@ -9,6 +9,7 @@ class DeathController extends Component {
         let evilPlatforms = GameObjects.findGameObjectsWithTag("EvilPlatform")
         let mainCube = GameObjects.find("Main")
         let spikes = GameObjects.findGameObjectsWithTag("Spike")
+        
 
     
 
@@ -22,8 +23,7 @@ class DeathController extends Component {
             if (xDistanceEvil < 60 && yDistanceEvil < 51) {
                 mainCube.destroy()
                 console.log("died")
-                SceneManager.currentScene = new Level01
-
+                SceneManager.loadScene(Level01)
             }
         }
 
@@ -35,7 +35,7 @@ class DeathController extends Component {
             if (distanceFromSpike < 40) {
                 mainCube.destroy()
                 console.log("died")
-                SceneManager.currentScene = new Level02
+                SceneManager.loadScene(Level01)
             }
         }
         

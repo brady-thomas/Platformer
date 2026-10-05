@@ -5,6 +5,7 @@ class Scene{
         this.gameObjects.push(gameObject)
         gameObject.transform.position = position
         gameObject.transform.rotation = rotation
+        return gameObject
     }
 
 
