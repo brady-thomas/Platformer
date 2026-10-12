@@ -14,7 +14,7 @@ class Level05 extends Scene{
 
 
        
-        this.instantiate(new Level04ControllerGameObject())
+        this.instantiate(new Level05ControllerGameObject())
 
 
         this.instantiate(new WinCheckGameObject(), new Vector2(-1000,-1000))

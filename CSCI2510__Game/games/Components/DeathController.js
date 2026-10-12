@@ -9,6 +9,7 @@ class DeathController extends Component {
         let evilPlatforms = GameObjects.findGameObjectsWithTag("EvilPlatform")
         let mainCube = GameObjects.find("Main")
         let spikes = GameObjects.findGameObjectsWithTag("Spike")
+        let laserWalls = GameObjects.findGameObjectsWithTag("LaserWall")
         
 
     
@@ -38,9 +39,18 @@ class DeathController extends Component {
                 SceneManager.loadScene(Level01)
             }
         }
-        
 
-        
+        for (const laserWall of laserWalls) {
+            let laserWallPosition = laserWall.transform.position
+            let distanceFromLaserWall = myPosition.minus(laserWallPosition)
+            if (Math.abs(distanceFromLaserWall.x) < 40) {
+                console.log(distanceFromLaserWall)
+                mainCube.destroy()
+                console.log("died")
+                SceneManager.loadScene(Level01)
+            }
+        }
+
          
     }
 
