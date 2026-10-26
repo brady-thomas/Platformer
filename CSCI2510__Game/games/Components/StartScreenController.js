@@ -8,4 +8,8 @@ class StartScreenController extends Component{
 
         }
     }
+
+    onMouseOver(){
+        console.log("mouse over")
+    }
 }

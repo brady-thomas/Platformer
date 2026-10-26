@@ -1,13 +1,16 @@
 class Level05 extends Scene{
     constructor(){
         super()
-        this.instantiate(new PlatformGameObject(), new Vector2(150,625))
-        this.instantiate(new PlatformGameObject(), new Vector2(350,625))
-        this.instantiate(new PlatformGameObject(), new Vector2(550,625))
-        this.instantiate(new PlatformGameObject(), new Vector2(750,625))
-        this.instantiate(new GoodPlatformGameObject(), new Vector2(850,625))
+        //x - 650, y - 375
+        this.instantiate(new PlatformGameObject(), new Vector2(-500,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(-300,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(-100,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(100,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(300,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(500,250))
+        this.instantiate(new GoodPlatformGameObject(), new Vector2(550,250))
 
-        this.instantiate(new TurretGameObject(), new Vector2(950, 570))
+        this.instantiate(new TurretGameObject(), new Vector2(675, 200))
        
         
         

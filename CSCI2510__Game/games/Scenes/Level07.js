@@ -2,48 +2,48 @@ class Level07 extends Scene {
     constructor() {
         super()
 
-        this.instantiate(new PlatformGameObject(), new Vector2(150,625))
-        this.instantiate(new PlatformGameObject(), new Vector2(350,625))
-        this.instantiate(new HalfPlatform(), new Vector2(475,650), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(475,750), Math.PI / 2)
-        this.instantiate(new PlatformGameObject(), new Vector2(550,800))
-        this.instantiate(new PlatformGameObject(), new Vector2(750,800))
-        this.instantiate(new PlatformGameObject(), new Vector2(950,800))
-        this.instantiate(new HalfPlatform(), new Vector2(1025,650), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(1025,750), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(1025,550), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(1025,450), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(1025,350), Math.PI / 2)
-        this.instantiate(new HalfPlatform(), new Vector2(1025,250), Math.PI / 2)
+        this.instantiate(new PlatformGameObject(), new Vector2(-500,250))
+        this.instantiate(new PlatformGameObject(), new Vector2(-300,250))
+        this.instantiate(new HalfPlatform(), new Vector2(-175,275), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(-175,375), Math.PI / 2)
+        this.instantiate(new PlatformGameObject(), new Vector2(-100,425))
+        this.instantiate(new PlatformGameObject(), new Vector2(100,425))
+        this.instantiate(new PlatformGameObject(), new Vector2(300,425))
+        this.instantiate(new HalfPlatform(), new Vector2(375,275), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(375,375), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(375,175), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(375,75), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(375,-25), Math.PI / 2)
+        this.instantiate(new HalfPlatform(), new Vector2(375,-125), Math.PI / 2)
 
 
-        this.instantiate(new UpDownPlatformGameObject(), new Vector2(750, 500))
+        this.instantiate(new UpDownPlatformGameObject(), new Vector2(100, 125))
         
 
-        this.instantiate(new Spike(), new Vector2(545,735))
-        this.instantiate(new Spike(), new Vector2(595,735))
-        this.instantiate(new Spike(), new Vector2(645,735))
-        this.instantiate(new Spike(), new Vector2(695,735))
-        this.instantiate(new Spike(), new Vector2(745,735))
-        this.instantiate(new Spike(), new Vector2(795,735))
-        this.instantiate(new Spike(), new Vector2(845,735))
-        this.instantiate(new Spike(), new Vector2(895,735))
-        this.instantiate(new Spike(), new Vector2(945,735))
+        this.instantiate(new Spike(), new Vector2(-105,360))
+        this.instantiate(new Spike(), new Vector2(-55,360))
+        this.instantiate(new Spike(), new Vector2(-5,360))
+        this.instantiate(new Spike(), new Vector2(45,360))
+        this.instantiate(new Spike(), new Vector2(95,360))
+        this.instantiate(new Spike(), new Vector2(145,360))
+        this.instantiate(new Spike(), new Vector2(195,360))
+        this.instantiate(new Spike(), new Vector2(245,360))
+        this.instantiate(new Spike(), new Vector2(295,360))
 
 
         
-        this.instantiate(new Spike(), new Vector2(960,250), Math.PI * 3 / 2)
-        this.instantiate(new Spike(), new Vector2(960,300), Math.PI * 3 / 2)
-        this.instantiate(new Spike(), new Vector2(960,350), Math.PI * 3 / 2)    
+        this.instantiate(new Spike(), new Vector2(310,-125), Math.PI * 3 / 2)
+        this.instantiate(new Spike(), new Vector2(310,-75), Math.PI * 3 / 2)
+        this.instantiate(new Spike(), new Vector2(310,-25), Math.PI * 3 / 2)    
        
 
 
 
 
-        this.instantiate(new GoodPlatformGameObject(), new Vector2(1100, 225))
+        this.instantiate(new GoodPlatformGameObject(), new Vector2(450, -150))
 
         this.instantiate(new WinCheckGameObject(), new Vector2(-1000,-1000))
 
-        this.instantiate(new Level06ControllerGameObject())
+        this.instantiate(new Level07ControllerGameObject())
     }
 }

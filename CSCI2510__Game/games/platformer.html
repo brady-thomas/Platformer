@@ -5,7 +5,6 @@
             *{
                 margin: 0;
                 overflow: hidden;
-                background-color: black;
             }
         </style>
     </head>
@@ -21,10 +20,13 @@
         <script src="../engine/Component.js"></script>
         <script src="../engine/Time.js"></script>
         <script src="../engine/SceneManager.js"></script>
+        <script src="../engine/Collisions.js"></script>
 
         <script src="../engine/components/Transform.js"></script>
         <script src="../engine/components/Polygon.js"></script>
         <script src="../engine/components/TextLabel.js"></script>
+        <script src="../engine/components/Collider.js"></script>
+        <script src="../engine/components/Camera.js"></script>
 
         <script src="../games/Components/UpdateComponent.js"></script>
         <script src="../games/Components/LaserController.js"></script>
@@ -43,6 +45,7 @@
         <script src="../games/Components/Level04Controller.js"></script>
         <script src="../games/Components/Level05Controller.js"></script>
         <script src="../games/Components/Level06Controller.js"></script>
+        <script src="../games/Components/Level07Controller.js"></script>
 
         <script src="../games/GameObjects/MainGameObject.js"></script>
         <script src="../games/GameObjects/PlatformGameObject.js"></script>
@@ -52,20 +55,25 @@
         <script src="../games/GameObjects/Level01ControllerGameObject.js"></script>
         <script src="../games/GameObjects/TimeDisplayGameObject.js"></script>
         <script src="../games/GameObjects/WinCheckGameObject.js"></script>
-        <script src="../games/GameObjects/StartScreenGameObject.js"></script>
+        <script src="../games/GameObjects/StartScreenLabel01GameObject.js"></script>
+        <script src="../games/GameObjects/StartScreenLabel02GameObject.js"></script>
         <script src="../games/GameObjects/Level02ControllerGameObject.js"></script>
         <script src="../games/GameObjects/Level03ControllerGameObject.js"></script>
         <script src="../games/GameObjects/Level04ControllerGameObject.js"></script>
         <script src="../games/GameObjects/Level05ControllerGameObject.js"></script>
         <script src="../games/GameObjects/Level06ControllerGameObject.js"></script>
+        <script src="../games/GameObjects/Level07ControllerGameObject.js"></script>
         <script src="../games/GameObjects/HalfPlatform.js"></script>
-        <script src="../games/GameObjects/ControlsTextLabel.js"></script>
+        <script src="../games/GameObjects/ControlsTextLabel01.js"></script>
+        <script src="../games/GameObjects/ControlsTextLabel02.js"></script>
+        <script src="../games/GameObjects/ControlsTextLabel03.js"></script>
         <script src="../games/GameObjects/LaserGameObject.js"></script>
         <script src="../games/GameObjects/TurretGameObject.js"></script>
         <script src="../games/GameObjects/LaserWallTurretGameObject.js"></script>
         <script src="../games/GameObjects/LaserWallGameObject.js"></script>
         <script src="../games/GameObjects/LaserWallWarningGameObject.js"></script>
         <script src="../games/GameObjects/UpDownPlatformGameObject.js"></script>
+        <script src="../games/GameObjects/StartButtonGameObject.js"></script>
 
         
         
@@ -78,21 +86,37 @@
         <script src="../games/Scenes/Level05.js"></script>
         <script src="../games/Scenes/Level06.js"></script>
         <script src="../games/Scenes/Level07.js"></script>
+        <script src="../games/Scenes/Level08.js"></script>
         <script src="../games/Scenes/GenericLevel.js"></script>
         <script src="../games/Scenes/StartScene.js"></script>
         x
 
         <script src="../games/Assets.js"></script>
         <script src="../games/Globals.js"></script>
+        <script src="../games/Settings.js"></script>
 
 
 
 
         <script>
 
-            Engine.start(StartScene)
+            Engine.start(StartScene, Settings)
+
+
+            // let gameObject = new GameObjects()
+            //  gameObject.addComponent(new Polygon(), {points:[
+            //     new Vector2(0,-1), 
+            //     new Vector2(-1,1), 
+            //     new Vector2(1, 1)
+            // ]})
+
+            //  console.assert(Collisions.isCollisionPointPolygon(new Vector2(0,0), gameObject))
+            //  console.assert(!Collisions.isCollisionPointPolygon(new Vector2(10000,100000), gameObject))
+
+
+            //  console.assert(!Collisions.isCollisionPointPolygon(new Vector2(0,1.001), gameObject))
 
         </script>
 
     </body>
-</html>
+</html> 

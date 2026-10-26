@@ -1,57 +1,68 @@
 class DeathController extends Component {
     
-
     
 
-    update(){
+    // update(){
 
-        let myPosition = this.transform.position
-        let evilPlatforms = GameObjects.findGameObjectsWithTag("EvilPlatform")
-        let mainCube = GameObjects.find("Main")
-        let spikes = GameObjects.findGameObjectsWithTag("Spike")
-        let laserWalls = GameObjects.findGameObjectsWithTag("LaserWall")
+        // let myPosition = this.transform.position
+        // let evilPlatforms = GameObjects.findGameObjectsWithTag("EvilPlatform")
+        // let mainCube = GameObjects.find("Main")
+        // let spikes = GameObjects.findGameObjectsWithTag("Spike")
+        // let laserWalls = GameObjects.findGameObjectsWithTag("LaserWall")
         
 
     
 
         
 
-        for (const evilPlatform of evilPlatforms){
-            let evilPlatPosition = evilPlatform.transform.position
-            let distanceFromEvil = myPosition.minus(evilPlatPosition)
-            let xDistanceEvil = Math.abs(distanceFromEvil.x)
-            let yDistanceEvil = Math.abs(distanceFromEvil.y)
-            if (xDistanceEvil < 60 && yDistanceEvil < 51) {
-                mainCube.destroy()
-                console.log("died")
-                SceneManager.loadScene(Level01)
-            }
-        }
+    //     for (const evilPlatform of evilPlatforms){
+    //         let evilPlatPosition = evilPlatform.transform.position
+    //         let distanceFromEvil = myPosition.minus(evilPlatPosition)
+    //         let xDistanceEvil = Math.abs(distanceFromEvil.x)
+    //         let yDistanceEvil = Math.abs(distanceFromEvil.y)
+    //         if (xDistanceEvil < 60 && yDistanceEvil < 51) {
+    //             mainCube.destroy()
+    //             console.log("died")
+    //             SceneManager.loadScene(Level01)
+    //         }
+    //     }
 
 
-        for (const spike of spikes) {
-            let spikePosition = spike.transform.position
-            let distanceFromSpike = myPosition.minus(spikePosition).magnitude
-            //console.log(distanceFromSpike)
-            if (distanceFromSpike < 40) {
-                mainCube.destroy()
-                console.log("died")
-                SceneManager.loadScene(Level01)
-            }
-        }
+    //     for (const spike of spikes) {
+    //         let spikePosition = spike.transform.position
+    //         let distanceFromSpike = myPosition.minus(spikePosition).magnitude
+    //         //console.log(distanceFromSpike)
+    //         if (distanceFromSpike < 40) {
+    //             mainCube.destroy()
+    //             console.log("died")
+    //             SceneManager.loadScene(Level01)
+    //         }
+    //     }
 
-        for (const laserWall of laserWalls) {
-            let laserWallPosition = laserWall.transform.position
-            let distanceFromLaserWall = myPosition.minus(laserWallPosition)
-            if (Math.abs(distanceFromLaserWall.x) < 40) {
-                console.log(distanceFromLaserWall)
-                mainCube.destroy()
-                console.log("died")
-                SceneManager.loadScene(Level01)
-            }
-        }
+    //     for (const laserWall of laserWalls) {
+    //         let laserWallPosition = laserWall.transform.position
+    //         let distanceFromLaserWall = myPosition.minus(laserWallPosition)
+    //         if (Math.abs(distanceFromLaserWall.x) < 40) {
+    //             console.log(distanceFromLaserWall)
+    //             mainCube.destroy()
+    //             console.log("died")
+    //             SceneManager.loadScene(Level01)
+    //         }
+    //     }
 
          
+    // }
+
+
+    onCollisionStay(other){
+
+        
+        if (GameObjects.findGameObjectsWithTag("EvilPlatform").includes(other) || GameObjects.findGameObjectsWithTag("Spike").includes(other) || GameObjects.findGameObjectsWithTag("LaserWall").includes(other) || GameObjects.findGameObjectsWithTag("Laser").includes(other)){
+            let mainCube = GameObjects.find("Main")
+            mainCube.destroy()
+            console.log("died")
+            SceneManager.loadScene(Level01)
+        }
     }
 
 }

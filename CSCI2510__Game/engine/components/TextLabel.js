@@ -3,6 +3,8 @@ class TextLabel extends Component{
 
     text = "[BLANK]"
 
+    font = "10px Arial" 
+
     draw(ctx) {
         
 
@@ -15,6 +17,7 @@ class TextLabel extends Component{
  
 
         ctx.fillStyle = this.fillStyle
+        ctx.font = this.font
 
         ctx.fillText(this.text, 0,0)
 

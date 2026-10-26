@@ -9,11 +9,11 @@ class TurretController extends Component {
 
         this.transform.position.y -= Time.deltaTime * 400 * this.direction
 
-        if (this.transform.position.y < 350){
+        if (this.transform.position.y < 0){
             this.direction = -1
         }
         
-        if (this.transform.position.y > 575){
+        if (this.transform.position.y > 225){
             this.direction = 1
         }
 
