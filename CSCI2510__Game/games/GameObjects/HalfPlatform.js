@@ -6,7 +6,7 @@ class HalfPlatform extends GameObjects{
 
         this.addComponent(new PlatformController())
 
-
+        this.addComponent(new Collider())
 
 
     }

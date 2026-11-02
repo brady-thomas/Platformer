@@ -10,5 +10,8 @@ class MainGameObject extends GameObjects{
 
 
         this.addComponent(new Collider())
+        
+        this.addComponent(new RigidBody(), {gravity:1000})
+
     }
 }

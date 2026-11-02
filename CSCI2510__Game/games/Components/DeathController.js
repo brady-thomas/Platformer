@@ -2,9 +2,10 @@ class DeathController extends Component {
     
     
 
-    // update(){
+    update(){
 
-        // let myPosition = this.transform.position
+        let myPosition = this.transform.position
+        let mainCube = GameObjects.find("Main")
         // let evilPlatforms = GameObjects.findGameObjectsWithTag("EvilPlatform")
         // let mainCube = GameObjects.find("Main")
         // let spikes = GameObjects.findGameObjectsWithTag("Spike")
@@ -12,7 +13,11 @@ class DeathController extends Component {
         
 
     
-
+        if (myPosition.y > 1000){
+            mainCube.destroy()
+            console.log("died")
+            SceneManager.loadScene(Level01)
+        }
         
 
     //     for (const evilPlatform of evilPlatforms){
@@ -51,13 +56,13 @@ class DeathController extends Component {
     //     }
 
          
-    // }
+    }
 
 
     onCollisionStay(other){
 
         
-        if (GameObjects.findGameObjectsWithTag("EvilPlatform").includes(other) || GameObjects.findGameObjectsWithTag("Spike").includes(other) || GameObjects.findGameObjectsWithTag("LaserWall").includes(other) || GameObjects.findGameObjectsWithTag("Laser").includes(other)){
+        if (GameObjects.findGameObjectsWithTag("EvilPlatform").includes(other) || GameObjects.findGameObjectsWithTag("Spike").includes(other) || GameObjects.findGameObjectsWithTag("LaserWall").includes(other) || GameObjects.findGameObjectsWithTag("Laser").includes(other) || GameObjects.findGameObjectsWithTag("SpinningLaser").includes(other)){
             let mainCube = GameObjects.find("Main")
             mainCube.destroy()
             console.log("died")

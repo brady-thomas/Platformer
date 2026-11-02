@@ -18,4 +18,10 @@ class UpDownPlatformController extends Component {
     }
 
 
+
+    onCollisionStay(other){
+       // other.transform.setParent(this.transform)
+    }
+
+
 }

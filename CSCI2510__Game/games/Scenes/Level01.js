@@ -25,6 +25,6 @@ class Level01 extends Scene{
         
     
         this.instantiate(new ControlsTextLabel01(), new Vector2(350, 390))
-        this.instantiate(new ControlsTextLabel02(), new Vector2(800, 440))
+        //this.instantiate(new ControlsTextLabel02(), new Vector2(800, 440))
     }
 }

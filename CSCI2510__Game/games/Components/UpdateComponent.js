@@ -5,11 +5,11 @@ class UpdateComponent extends Component {
 
 
     start(){
-        this.isColliding = false
-        this.isCollidingDown = false
-        this.isCollidingUp = false
-        this.isCollidingRight = false
-        this.isCollidingLeft = false
+        // this.isColliding = false
+        // this.isCollidingDown = false
+        // this.isCollidingUp = false
+        // this.isCollidingRight = false
+        // this.isCollidingLeft = false
     }
 
 
@@ -36,43 +36,30 @@ class UpdateComponent extends Component {
 
 
         if (Input.keysDown.includes("ArrowUp") || Input.keysDown.includes("KeyW"))
-            if (!this.isCollidingUp){
+            //if (!this.isCollidingUp){
                 this.transform.position.y = this.transform.position.y - Time.deltaTime * this.speed
-            }
+            //}
 
         if (Input.keysDown.includes("ArrowDown") || Input.keysDown.includes("KeyS")){
-            if (!this.isCollidingDown) {
+            //if (!this.isCollidingDown) {
                 this.transform.position.y = this.transform.position.y + Time.deltaTime * this.speed
-            }
+            //}
         }
     
-       this.isCollidingDown = false 
-       this.isCollidingUp = false 
-       this.isCollidingRight = false 
-       this.isCollidingLeft = false 
-       this.isColliding = false 
+    //    this.isCollidingDown = false 
+    //    this.isCollidingUp = false 
+    //    this.isCollidingRight = false 
+    //    this.isCollidingLeft = false 
+    //    this.isColliding = false 
         
         
         
     }
 
-    onCollisionStay(other){
-        // console.log(other)
-        this.isColliding = true
+    onCollisionStay(other, minimumTransformVector){
+    this.gameObjects.getComponent(RigidBody).velocity.y = 0
+  }
 
-        if (other.transform.position.y > this.transform.position.y) {
-            this.isCollidingDown = true
-        }
-        if (other.transform.position.y < this.transform.position.y) {
-            this.isCollidingUp = true
-        }
-        // if (other.transform.position.x > this.transform.position.x) {
-        //     this.isCollidingRight = true
-        // }
-        // if (other.transform.position.x < this.transform.position.x) {
-        //     this.isCollidingLeft = true
-        // }
-    }
 
 
 

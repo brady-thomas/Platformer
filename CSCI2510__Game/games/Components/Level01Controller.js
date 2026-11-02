@@ -10,7 +10,18 @@ class Level01Controller extends Component{
             SceneManager.loadScene(Level02)
         }
 
+        if(Input.keysDown.includes("KeyM")){
+            SceneManager.loadScene(Level09)
+        }
+
+        if(Input.keysDown.includes("KeyN")){
+            SceneManager.loadScene(Level11)
+        }
+
     }
+
+
+    
 
 
 }
